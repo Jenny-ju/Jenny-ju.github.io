@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Pytorch学习记录</title>
+    <url>/2023/12/17/Pytorch_%E5%B0%8F%E5%9C%9F%E5%A0%86_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<ol>
+<li><p>tensorboard的使用</p>
+<ol>
+<li>SummaryWriter(“logs”)：用于读取logdir中的日志</li>
+<li>add_scalor()：用于图像绘制</li>
+<li>add_image()：用于获取图像到summary中<ol>
+<li>通常dataformats&#x3D;’CHW’，但是ndarray格式要修改为dataformats&#x3D;’HWC’</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>transforms的使用</p>
+<ol>
+<li><p>为什么用tensor</p>
+<p>tensor就是矩阵，就是神经网络专用的数据类型，包含了许多神经网络需要的参数。</p>
+</li>
+<li><p>PIL和np.array（opencv）的区别：cv2是BGR PIL是RGB</p>
+</li>
+<li><p>Ctrl+P的功能：查看填入上面类型的参数</p>
+</li>
+<li><p>ToTensor()：转换图像类型格式</p>
+<p>​						Convert a <code>PIL Image</code> or <code>numpy.ndarray</code> to tensor</p>
+</li>
+<li><p>Normalize()：用平均值和标准差对张量图像进行归一化</p>
+<p>input[channel] &#x3D; (input[channel] - mean[channel]) &#x2F; std[channel]</p>
+</li>
+<li><p>Resize()：把PIL image调整为特定的尺寸</p>
+</li>
+<li><p>Compose()：</p>
+<p>​		Compose()中的参数需要是一个列表，在Python中，列表的表示形式为[数据1,数据2,…]，而在Compose中，数据需要是transforms类型，所以得到，Compose([transforms参数1， transforms参数…])</p>
+<p>​		相当于把PIL图像resize后，转化为tensor类型两个步骤组合起来。</p>
+</li>
+</ol>
+</li>
+<li><p>要点</p>
+<ol>
+<li><p>关注输入和输出类型</p>
+</li>
+<li><p>多看pytorch官方文档</p>
+</li>
+<li><p>关注方法需要什么参数（Ctrl+P）</p>
+</li>
+<li><p>不知道返回值的时候</p>
+<p>​	print()</p>
+<p>​	print(type())</p>
+<p>​	(断点)debug</p>
+</li>
+</ol>
+</li>
+<li><p>torchvision中数据集的使用</p>
+<ol>
+<li>pytorch官网检索数据集、分割模型等</li>
+<li>下载公共数据集到dataset文件夹位置</li>
+</ol>
+</li>
+<li><p>dataloader的使用</p>
+<ol>
+<li>dataset作用：指定数据集的位置，列表中的位置（例如[0]）指的是那个数据</li>
+<li>dataloader原理：数据加载器，将数据加载到神经网络中</li>
+</ol>
+</li>
+</ol>
+<img src="C:\Users\朱佳妮\AppData\Roaming\Typora\typora-user-images\image-20231206212756244.png" alt="image-20231206212756244" style="zoom:50%;" />
+
+<p>​			3. 各项参数的使用，以及在tensorboard上的图片可视化</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">test_loader = DataLoader(test_data,batch_size=<span class="number">64</span>,shuffle=<span class="literal">True</span>,num_workers=<span class="number">0</span>,drop_last=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>神经网络的搭建：神经网络的基本骨架（nn.module的使用）</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/12/15/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
