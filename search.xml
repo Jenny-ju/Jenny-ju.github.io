@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/12/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>我的第一篇文章</title>
+    <url>/2023/12/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h6 id="一、博客安装笔记（部署在Github）"><a href="#一、博客安装笔记（部署在Github）" class="headerlink" title="一、博客安装笔记（部署在Github）"></a>一、博客安装笔记（部署在Github）</h6><ol>
+<li>#安装Node.js，直接去官网下载最新版：nodejs.org</li>
+</ol>
+<p>-—-</p>
+<p>node -v	#查看node版本</p>
+<p>npm -v	#查看npm版本</p>
+<p>npm install -g cnpm –registry&#x3D;<a href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a>	#安装淘宝的cnpm 管理器</p>
+<p>cnpm -v	#查看cnpm版本</p>
+<p>cnpm install -g hexo-cli    #安装hexo框架</p>
+<p>hexo -v	#查看hexo版本</p>
+<p>mkdir blog	#创建blog目录</p>
+<p>cd blog	 #进入blog目录</p>
+<p>hexo init 	#生成博客 初始化博客</p>
+<p>hexo init如果报错</p>
+<p>error: RPC failed; curl 28 Recv failure: Connection was reset</p>
+<p>fatal: expected flush after ref listing</p>
+<p>先输入：</p>
+<p>git config –global http.sslVerify “false”</p>
+<p>hexo s	#启动本地博客服务</p>
+<p><a href="http://localhost:4000/">http://localhost:4000/</a>	#本地访问地址</p>
+<p>hexo n “我的第一篇文章” #创建新的文章 </p>
+<p>#返回blog目录</p>
+<p>hexo clean #清理</p>
+<p>hexo g #生成</p>
+<p>#Github创建一个新的仓库 YourGithubName.github.io</p>
+<p>cnpm install –save hexo-deployer-git #在blog目录下安装git部署插件<br>-—-</p>
+<ol start="2">
+<li>#配置_config.yml</li>
+</ol>
+<p>-—-</p>
+<p>​	# Deployment</p>
+<p>​	##  Docs: <a href="https://hexo.io/docs/deployment.html">https://hexo.io/docs/deployment.html</a></p>
+<p>​	deploy:</p>
+<p>​    type: ‘git’</p>
+<p>​	repo: <a href="https://github.com/Jenny-ju/Jenny-ju.github.io.git">https://github.com/Jenny-ju/Jenny-ju.github.io.git</a></p>
+<p>​	branch: master</p>
+<p>-—-</p>
+<ol start="3">
+<li>#重新清理、生成、部署到仓库</li>
+</ol>
+<p>-—-</p>
+<p>hexo clean  # 这个一定要有，否则会404，打不开网页</p>
+<p>hexo g	#生成</p>
+<p>hexo d	#部署到Github仓库里</p>
+<p>-—-</p>
+<ol start="4">
+<li>#访问这个地址可以查看博客</li>
+</ol>
+<p>-—-</p>
+<p><a href="https://jenny-ju.github.io/">https://jenny-ju.github.io/</a>  #查看博客</p>
+<p>-—-</p>
+<ol start="5">
+<li>#更改主题</li>
+</ol>
+<p>-—-</p>
+<p> git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia  #下载yilia主题到本地</p>
+<p>#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</p>
+<p>hexo clean	#清理一下（注意：windows下不能缩写）</p>
+<p>hexo g	#生成</p>
+<p>hexo d	#部署到远程Github仓库</p>
+<p><a href="https://jenny-ju.github.io/">https://jenny-ju.github.io/</a>  #查看博客</p>
+<p>-—-</p>
+<h6 id="二、博客安装笔记（部署在Gitee）"><a href="#二、博客安装笔记（部署在Gitee）" class="headerlink" title="二、博客安装笔记（部署在Gitee）"></a>二、博客安装笔记（部署在Gitee）</h6><ol>
+<li>配置SSH免密登录</li>
+</ol>
+<p><a href="https://blog.csdn.net/m0_68021330/article/details/132299299?spm=1001.2014.3001.5506">Hexo博客搭建和使用教程(Windows)_hexo安装-CSDN博客</a></p>
+<ol start="2">
+<li>解决Gitee网站404问题：要开启GiteePages功能</li>
+</ol>
+<p><a href="https://blog.csdn.net/weixin_45631738/article/details/104716374">hexo+gitee(码云)搭建个人博客避开所有坑-CSDN博客</a></p>
+<ol start="3">
+<li>其他步骤和Github一样</li>
+</ol>
+<h6 id="三、样式修改next"><a href="#三、样式修改next" class="headerlink" title="三、样式修改next"></a>三、样式修改next</h6><p><a href="https://blog.csdn.net/as480133937/article/details/100138838?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-100138838-blog-119657335.235%5Ev39%5Epc_relevant_anti_t3_base&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-100138838-blog-119657335.235%5Ev39%5Epc_relevant_anti_t3_base&utm_relevant_index=1">Hexo-Next 主题博客个性化配置超详细，超全面(两万字)_hexo next 记录访问了ip-CSDN博客</a></p>
+]]></content>
+  </entry>
+</search>
