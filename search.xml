@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Pytorch学习记录</title>
-    <url>/2023/12/17/Pytorch_%E5%B0%8F%E5%9C%9F%E5%A0%86_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <url>/2023/12/16/Pytorch_%E5%B0%8F%E5%9C%9F%E5%A0%86_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<ol>
 <li><p>tensorboard的使用</p>
 <ol>
@@ -74,6 +74,13 @@
 <li>神经网络的搭建：神经网络的基本骨架（nn.module的使用）</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>Pytorch</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>深度学习</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -170,6 +177,10 @@
 <li>其他步骤和Github一样</li>
 </ol>
 <h6 id="三、样式修改next"><a href="#三、样式修改next" class="headerlink" title="三、样式修改next"></a>三、样式修改next</h6><p><a href="https://blog.csdn.net/as480133937/article/details/100138838?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-100138838-blog-119657335.235%5Ev39%5Epc_relevant_anti_t3_base&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-100138838-blog-119657335.235%5Ev39%5Epc_relevant_anti_t3_base&utm_relevant_index=1">Hexo-Next 主题博客个性化配置超详细，超全面(两万字)_hexo next 记录访问了ip-CSDN博客</a></p>
+<p><a href="https://blog.csdn.net/weixin_33857230/article/details/91474562?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-91474562-blog-97758641.235%5Ev39%5Epc_relevant_anti_t3_base&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-91474562-blog-97758641.235%5Ev39%5Epc_relevant_anti_t3_base&utm_relevant_index=2">Hexo 添加分类及标签-CSDN博客</a></p>
 ]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
 </search>
