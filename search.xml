@@ -83,52 +83,59 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/12/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>我的第一篇文章</title>
     <url>/2023/12/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h6 id="一、博客安装笔记（部署在Github）"><a href="#一、博客安装笔记（部署在Github）" class="headerlink" title="一、博客安装笔记（部署在Github）"></a>一、博客安装笔记（部署在Github）</h6><ol>
 <li>#安装Node.js，直接去官网下载最新版：nodejs.org</li>
 </ol>
 <p>-—-</p>
-<p>node -v	#查看node版本</p>
-<p>npm -v	#查看npm版本</p>
-<p>npm install -g cnpm –registry&#x3D;<a href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a>	#安装淘宝的cnpm 管理器</p>
-<p>cnpm -v	#查看cnpm版本</p>
-<p>cnpm install -g hexo-cli    #安装hexo框架</p>
-<p>hexo -v	#查看hexo版本</p>
-<p>mkdir blog	#创建blog目录</p>
-<p>cd blog	 #进入blog目录</p>
-<p>hexo init 	#生成博客 初始化博客</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v	<span class="comment">#查看node版本</span></span><br><span class="line"></span><br><span class="line">npm -v	<span class="comment">#查看npm版本</span></span><br><span class="line"></span><br><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org	<span class="comment">#安装淘宝的cnpm 管理器</span></span><br><span class="line"></span><br><span class="line">cnpm -v	<span class="comment">#查看cnpm版本</span></span><br><span class="line"></span><br><span class="line">cnpm install -g hexo-cli    <span class="comment">#安装hexo框架</span></span><br><span class="line"></span><br><span class="line">hexo -v	<span class="comment">#查看hexo版本</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> blog	<span class="comment">#创建blog目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> blog	 <span class="comment">#进入blog目录</span></span><br><span class="line"></span><br><span class="line">hexo init 	<span class="comment">#生成博客 初始化博客</span></span><br></pre></td></tr></table></figure>
+
 <p>hexo init如果报错</p>
-<p>error: RPC failed; curl 28 Recv failure: Connection was reset</p>
-<p>fatal: expected flush after ref listing</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">error: RPC failed; curl 28 Recv failure: Connection was reset</span><br><span class="line"></span><br><span class="line">fatal: expected flush after ref listing</span><br></pre></td></tr></table></figure>
+
 <p>先输入：</p>
-<p>git config –global http.sslVerify “false”</p>
-<p>hexo s	#启动本地博客服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.sslVerify <span class="string">&quot;false&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s	<span class="comment">#启动本地博客服务</span></span><br></pre></td></tr></table></figure>
+
 <p><a href="http://localhost:4000/">http://localhost:4000/</a>	#本地访问地址</p>
-<p>hexo n “我的第一篇文章” #创建新的文章 </p>
-<p>#返回blog目录</p>
-<p>hexo clean #清理</p>
-<p>hexo g #生成</p>
-<p>#Github创建一个新的仓库 YourGithubName.github.io</p>
-<p>cnpm install –save hexo-deployer-git #在blog目录下安装git部署插件<br>-—-</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo n <span class="string">&quot;我的第一篇文章&quot;</span> <span class="comment">#创建新的文章 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">#返回blog目录</span></span><br><span class="line"></span><br><span class="line">hexo clean <span class="comment">#清理</span></span><br><span class="line"></span><br><span class="line">hexo g <span class="comment">#生成</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Github创建一个新的仓库 YourGithubName.github.io</span></span><br><span class="line"></span><br><span class="line">cnpm install --save hexo-deployer-git <span class="comment">#在blog目录下安装git部署插件</span></span><br></pre></td></tr></table></figure>
+
+<p>-—-</p>
 <ol start="2">
 <li>#配置_config.yml</li>
 </ol>
 <p>-—-</p>
-<p>​	# Deployment</p>
-<p>​	##  Docs: <a href="https://hexo.io/docs/deployment.html">https://hexo.io/docs/deployment.html</a></p>
-<p>​	deploy:</p>
-<p>​    type: ‘git’</p>
-<p>​	repo: <a href="https://github.com/Jenny-ju/Jenny-ju.github.io.git">https://github.com/Jenny-ju/Jenny-ju.github.io.git</a></p>
-<p>​	branch: master</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line"></span><br><span class="line">##  Docs: https://hexo.io/docs/deployment.html</span><br><span class="line"></span><br><span class="line">	deploy:</span><br><span class="line"></span><br><span class="line">    type: &#x27;git&#x27;</span><br><span class="line"></span><br><span class="line">	repo: https://github.com/Jenny-ju/Jenny-ju.github.io.git</span><br><span class="line"></span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+
 <p>-—-</p>
 <ol start="3">
 <li>#重新清理、生成、部署到仓库</li>
 </ol>
 <p>-—-</p>
-<p>hexo clean  # 这个一定要有，否则会404，打不开网页</p>
-<p>hexo g	#生成</p>
-<p>hexo d	#部署到Github仓库里</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean  <span class="comment"># 这个一定要有，否则会404，打不开网页</span></span><br><span class="line"></span><br><span class="line">hexo g	<span class="comment">#生成</span></span><br><span class="line"></span><br><span class="line">hexo d	<span class="comment">#部署到Github仓库里</span></span><br></pre></td></tr></table></figure>
+
 <p>-—-</p>
 <ol start="4">
 <li>#访问这个地址可以查看博客</li>
@@ -140,17 +147,15 @@
 <li>#更改主题</li>
 </ol>
 <p>-—-</p>
-<p> git clone <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia  #下载yilia主题到本地</p>
-<p>#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</p>
-<p>hexo clean	#清理一下（注意：windows下不能缩写）</p>
-<p>hexo g	#生成</p>
-<p>hexo d	#部署到远程Github仓库</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia  <span class="comment">#下载yilia主题到本地</span></span><br><span class="line"></span><br><span class="line">\<span class="comment">#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</span></span><br><span class="line"></span><br><span class="line">hexo clean	<span class="comment">#清理一下（注意：windows下不能缩写）</span></span><br><span class="line"></span><br><span class="line">hexo g	<span class="comment">#生成</span></span><br><span class="line"></span><br><span class="line">hexo d	<span class="comment">#部署到远程Github仓库</span></span><br></pre></td></tr></table></figure>
+
 <p><a href="https://jenny-ju.github.io/">https://jenny-ju.github.io/</a>  #查看博客</p>
 <p>-—-</p>
 <ol start="6">
 <li><p>报错：Spawn failed</p>
-<p><img src="C:\Users\朱佳妮\AppData\Roaming\Typora\typora-user-images\image-20231218200230120.png" alt="image-20231218200230120"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 解决方法：输入以下两行代码</span></span><br><span class="line">git config --global user.email <span class="string">&quot;21981682202@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line">git config --global user.name <span class="string">&quot;Jenny-ju&quot;</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 报错内容：</span></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br><span class="line">FATAL Something<span class="string">&#x27;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html</span></span><br><span class="line"><span class="string">Error: Spawn failed</span></span><br><span class="line"><span class="string">    at ChildProcess.&lt;anonymous&gt; (E:\Projects\blog\node_modules\.store\hexo-util@2.7.0\node_modules\hexo-util\lib\spawn.js:51:21)</span></span><br><span class="line"><span class="string">    at ChildProcess.emit (node:events:514:28)</span></span><br><span class="line"><span class="string">    at cp.emit (E:\Projects\blog\node_modules\.store\cross-spawn@7.0.3\node_modules\cross-spawn\lib\enoent.js:34:29)</span></span><br><span class="line"><span class="string">    at ChildProcess._handle.onexit (node:internal/child_process:294:12)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 报错原因：代码提交到GitHub上出错，需要输入GitHub账户默认标识</span></span><br><span class="line"><span class="comment"># 解决方法：输入以下两行代码</span></span><br><span class="line">git config --global user.email <span class="string">&quot;21981682202@qq.com&quot;</span></span><br><span class="line">git config --global user.name <span class="string">&quot;Jenny-ju&quot;</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h6 id="二、博客安装笔记（部署在Gitee）"><a href="#二、博客安装笔记（部署在Gitee）" class="headerlink" title="二、博客安装笔记（部署在Gitee）"></a>二、博客安装笔记（部署在Gitee）</h6><ol>
 <li>配置SSH免密登录</li>
@@ -169,23 +174,5 @@
       <tags>
         <tag>Hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/12/15/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
